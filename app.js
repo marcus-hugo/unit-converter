@@ -5,7 +5,7 @@ const displayVolumeEl = document.getElementById('display-volume-element');
 const displayMassEl = document.getElementById('display-mass-element');
 
 numInput.addEventListener('input', function() {
-    numInputValue = parseFloat(numInput.value).toFixed(3);
+    numInputValue = parseFloat(numInput.value);
     console.log(numInputValue)
 
     //////////////// LENGTH /////////////////////////////////////
@@ -38,7 +38,7 @@ numInput.addEventListener('input', function() {
     let PoundsToKilos  = (numInputValue / 2.205).toFixed(3);
 
     displayMassEl.textContent = `
-    ${numInputValue} kilos = ${litersToGallons} pounds | 
-    ${numInputValue} Pounds = ${gallonsToLiters} kilos
+    ${numInputValue} kilos = ${kilosToPounds} pounds | 
+    ${numInputValue} Pounds = ${PoundsToKilos} kilos
     `;
 })
