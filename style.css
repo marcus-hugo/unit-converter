@@ -1,0 +1,111 @@
+:root {
+    --clr-dark: #212121;
+    --clr-dark-grey: #424242;
+    --clr-light-grey: #bdbdbd;
+    --clr-light: #f5f5f5;
+
+    /* https://www.joshwcomeau.com/gradient-generator/ */
+    --linear-gd: linear-gradient(180deg,
+            hsl(14deg 76% 30%) 7%,
+            hsl(20deg 79% 34%) 60%,
+            hsl(25deg 83% 37%) 75%,
+            hsl(30deg 88% 40%) 83%,
+            hsl(35deg 95% 41%) 89%,
+            hsl(39deg 100% 43%) 93%,
+            hsl(43deg 100% 45%) 96%,
+            hsl(46deg 100% 47%) 98%,
+            hsl(51deg 100% 49%) 99%,
+            hsl(55deg 100% 50%) 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+div.title-input-wrapper {
+    background: var(--linear-gd);
+    border-radius: 5px 5px 0 0;
+}
+
+.title {
+    font-size: 1.3752rem;
+    font-weight: 800;
+    line-height: 38px;
+    padding: 53px 50px 0 50px;
+    margin-bottom: 14px;
+}
+
+.number-input {
+    /* does not inherit font-family from body */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    /* font-size affects the overall height */
+    font-size: 6.06rem;
+    line-height: 24px;
+    text-align: center;
+    max-width: 211px;
+    background: none;
+    border: none;
+    /* does not inherit color from body */
+    color: var(--clr-light);
+    margin-bottom: 36px;
+}
+
+.number-input::placeholder {
+    color: var(--clr-light);
+}
+
+div.display {
+    background: var(--clr-dark-grey);
+    border-radius: 0 0 5px 5px;
+}
+
+h2,
+h3,
+h4 {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 20px;
+    padding-top: 37px;
+    margin-bottom: 5px;
+}
+
+h4+p {
+    padding-bottom: 38px;
+}
+
+/* adjacent sibling combinator */
+h2+p,
+h3+p,
+h4+p {
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 20px;
+}
+
+footer {
+    font-size: .687rem;
+    padding: 10px;
+}
+
+/* child combinator */
+footer p>a {
+    color: var(--clr-light-grey);
+}

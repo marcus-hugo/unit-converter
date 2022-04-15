@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <main>
+        <div class="title-input-wrapper" id="input">
+            <h1 class="title">Metric/Imperial Unit Conversion</h1>
+            <input id="number-input" class="number-input" type="number" min="0" placeholder="0">
+            <label for="number-input"></label>
+        </div>
+        <div class="display" id="display">
+            <h2>Length (Meter/Feet)</h2>
+            <p id="display-length-element">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
+            <h3>Volume (Liters/Gallons)</h3>
+            <p id="display-volume-element">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+            <h4>Mass (Kilograms/Pounds)</h4>
+            <p id="display-mass-element">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
+        </div>
+    </main>
+    <footer>
+        <!-- <p>Challeged by <a href="">Scrimba</a></p> -->
+        <p>Coded by <a href="">Marcus Hugo</a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
